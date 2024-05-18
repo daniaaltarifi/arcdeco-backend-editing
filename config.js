@@ -88,9 +88,9 @@ const express = require('express');
 const app = express();
 const mysql2 = require('mysql2');
 const db = mysql2.createConnection({
-    host: process.env.DB_HOST,
+    host: "localhost",
     user: process.env.DB_USER,
-    password: "",
+    password: process.env.DB_PASS,
     database: process.env.DB_NAME
 });
 module.exports=db
